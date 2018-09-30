@@ -14,3 +14,14 @@ Comenzamos instalando la gema HTTParty
     response = HTTParty.get(url, :verify => false )
     $dolar  = response.parsed_response["Dolares"][0]["Valor"].to_f
 ```
+
+# Ejemplo API de spotify
+Referencias
+https://developer.spotify.com/documentation/web-api/reference/
+
+Wrapper para facilitar proceso:
+https://github.com/guilhermesad/rspotify
+
+
+
+

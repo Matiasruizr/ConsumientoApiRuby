@@ -24,4 +24,14 @@ https://github.com/guilhermesad/rspotify
 
 
 
+# Ejemplo API de Wordpress
+    @url = 'https://www.turismoraido.cl/wp-json/wp/v2/posts'
+    @response = HTTParty.get(@url, :verify => false )
 
+    @post = @response.parsed_response
+
+    <% @post.each do |p| %>          
+        <h2><%= p['title']["rendered"] %>></h2>
+        <p> <%= p['excerpt']["rendered"] %></p>
+    <% end %>
+    
